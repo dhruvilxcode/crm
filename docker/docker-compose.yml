@@ -24,8 +24,8 @@ services:
     #   - '.:/workspace'
     # Ports removed to prevent host conflicts on Coolify. 
     # Coolify's proxy will route traffic to port 8000 internally.
-    # ports:
-    #   - '8000:8000'
-    #   - '9000:9000'
+    ports:
+      - '8000:8000'
+      - '9000:9000'
 volumes:
   mariadb-data: null
