@@ -16,12 +16,10 @@ services:
     image: 'redis:alpine'
   frappe:
     image: 'frappe/bench:latest'
-    command: 'bash /workspace/init.sh'
+    command: bash -c "curl -sL https://raw.githubusercontent.com/frappe/crm/develop/docker/init.sh | bash"
     environment:
       - SHELL=/bin/bash
     working_dir: /home/frappe
-    volumes:
-      - './:/workspace'
     # volumes:
     #   - '.:/workspace'
     # Ports removed to prevent host conflicts on Coolify. 
