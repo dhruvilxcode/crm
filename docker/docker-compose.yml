@@ -22,6 +22,9 @@ services:
     working_dir: /home/frappe
     expose:
       - "8000"
+    ports:
+      - '8000:8000'
+      - '9000:9000'
     # volumes:
     #   - '.:/workspace'
     # Ports removed to prevent host conflicts on Coolify. 
